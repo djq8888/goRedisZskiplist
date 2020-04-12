@@ -17,3 +17,11 @@ type zskiplistNode struct {
 	//该节点在各层的信息
 	level []zskiplistLevel
 }
+
+func createNode(level int, score float64, obj interface{}) *zskiplistNode {
+	zn := new(zskiplistNode)
+	zn.level = make([]zskiplistLevel, level)
+	zn.score = score
+	zn.obj = obj
+	return zn
+}

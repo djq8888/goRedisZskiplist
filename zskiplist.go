@@ -2,6 +2,7 @@ package goRedisZskiplist
 
 const (
 	ZSKIPLIST_MAXLEVEL = 32
+	ZSKIPLIST_P = 0.25
 )
 
 type Zskiplist struct {
